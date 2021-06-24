@@ -42,7 +42,7 @@ paragraph."
   (interactive)
   (save-excursion
     (start-of-paragraph-text)
-    (push-mark)))
+    (push-mark-command prefix-arg)))
 
 (defun mark-paragraph-to-end ()
   "Mark from `point' to the end of the paragraph.
@@ -52,7 +52,7 @@ paragraph."
   (interactive)
   (save-excursion
     (end-of-paragraph-text)
-    (push-mark)))
+    (push-mark-command prefix-arg)))
 
 (provide 'mark-paragraph)
 
