@@ -2,7 +2,7 @@
 ;; Copyright 2021 by Dave Pearson <davep@davep.org>
 
 ;; Author: Dave Pearson <davep@davep.org>
-;; Version: 0.01
+;; Version: 0.02
 ;; Keywords: convenience
 ;; URL: https://github.com/davep/mark-paragraph.el
 ;; Package-Requires: ((emacs "24"))
@@ -34,6 +34,7 @@
 
 ;;; Code:
 
+;;;###autoload
 (defun mark-paragraph-to-start ()
   "Mark from `point' to the start of the paragraph.
 
@@ -44,6 +45,7 @@ paragraph."
     (start-of-paragraph-text)
     (push-mark-command prefix-arg)))
 
+;;;###autoload
 (defun mark-paragraph-to-end ()
   "Mark from `point' to the end of the paragraph.
 
